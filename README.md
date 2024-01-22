@@ -14,7 +14,7 @@
 <p>if the system has been closed, unpowered and idle for 5 minutes, the system forcefully goes to sleep </p>
 
 <h2>Supported Systems:</h2>
-<ul><li>Linux Manjaro - unconfirmed</li></ul>
+<ul><li>Linux Manjaro - confirmed on x86_64 Kernel 6.6.10-1</li></ul>
 
 <h2>Want to help out?</h2>
 <p>I need to compile the same C language files on different systems to see what needs to change and what happens on compile time, seeing that I don't routinely use those systems my knowledge of them can benefit from your contribution.</p>

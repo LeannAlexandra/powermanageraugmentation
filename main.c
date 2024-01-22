@@ -16,7 +16,7 @@
 int verboseLogging = FALSE;
 int logging = TRUE;
 
-// Function to check if the laptop is plugged into AC power
+// MANJARO SPECIFIC Function to check if the laptop is plugged into AC power
 int isPluggedIn() {
     // Platform-specific code for Linux
     // You may need to adjust this based on your Linux distribution
@@ -33,7 +33,7 @@ int isPluggedIn() {
     return result;
 }
 
-// Function to check if the lid is closed
+// MANJARO SPECIFIC: Function to check if the lid is closed
 int isLidClosed() {
     // Platform-specific code for Linux
     // You may need to adjust this based on your Linux distribution
@@ -50,13 +50,13 @@ int isLidClosed() {
     return result;
 }
 
-// Function to force the computer into sleep mode
+// LINUX SPECIFIC Function to force the computer into sleep mode
 void forceSleep() {
     system("systemctl suspend");
 }
 
 
-// Platform-specific implementation for getting inactive time
+// MANJARO Platform-specific implementation for getting inactive time
 // Function to get the time since the last user activity in seconds
 unsigned int getInactiveTime() {
     Display* display = XOpenDisplay(NULL);
@@ -75,6 +75,7 @@ unsigned int getInactiveTime() {
 
     return idleTime;
 }
+
 // Function to get the current timestamp
 void printTimestamp() {
     time_t rawtime;
@@ -103,11 +104,8 @@ int main() {
                 if(verboseLogging)
                     printf("Not Plugged In. ");
                 // If not connected to AC power, check inactivity time
-                // Replace the sleep function with your preferred method of tracking inactivity time
-                sleep(CHECK_INTERVAL); // Simulating a 5-second interval, replace with your code
-
+                //sleep(CHECK_INTERVAL); // Simulating a 10-second interval, replace with your code
                 // Check if inactivity time exceeds the threshold
-                // You need to implement a mechanism to track inactivity time
                 if (getInactiveTime() > INACTIVITY_THRESHOLD) {
                     if(verboseLogging||logging)
                         printf("Idle Time exceeds Threshold. - GOING TO SLEEP\n");

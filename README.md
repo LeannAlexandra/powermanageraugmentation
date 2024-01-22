@@ -17,7 +17,7 @@
 
 <h2>Supported Systems:</h2>
 <ul><li>Linux Manjaro - confirmed on x86_64 Kernel 6.6.10-1
-<img src="https://i.imgflip.com/i/8d5dx2.jpg" alt="it works on my machine">
+<a href="https://imgflip.com/i/8d5dx2"><img src="https://i.imgflip.com/8d5dx2.jpg" title="made at imgflip.com"/></a><div><a href="https://imgflip.com/memegenerator">from Imgflip Meme Generator</a></div>
 </li></ul>
 
 <h2>Want to help out?</h2>

@@ -14,6 +14,7 @@
 #define FALSE 0
 
 int verboseLogging = FALSE;
+int logging = TRUE;
 
 // Function to check if the laptop is plugged into AC power
 int isPluggedIn() {
@@ -93,8 +94,9 @@ int main() {
         // Check if the lid is closed
         if (isLidClosed()) {
             // If the lid is closed, check power status
-            if(verboseLogging){
+            if(logging||verboseLogging)
                 printTimestamp(); // Print timestamp
+            if(verboseLogging){
                 printf("Lid is closed. ");
             }
             if (!isPluggedIn()) {
@@ -107,9 +109,9 @@ int main() {
                 // Check if inactivity time exceeds the threshold
                 // You need to implement a mechanism to track inactivity time
                 if (getInactiveTime() > INACTIVITY_THRESHOLD) {
-                    if(verboseLogging)
+                    if(verboseLogging||logging)
                         printf("Idle Time exceeds Threshold. - GOING TO SLEEP\n");
-                    printf("TODO: TIME FOR NIGHTY NIGHT NIGHT");
+                    // printf("TODO: TIME FOR NIGHTY NIGHT NIGHT");
                     forceSleep();
                 }else if( verboseLogging){
                     printf("Inactive time within threshold. %d\n",getInactiveTime());
